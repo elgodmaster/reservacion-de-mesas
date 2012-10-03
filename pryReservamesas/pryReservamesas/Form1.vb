@@ -68,22 +68,16 @@ Public Class Form1
     End Sub
 
     Private Sub btnReportes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReportes.Click
-        'If frmreporte Is Nothing OrElse Not frmreporte.Visible Then
-        '    LlenarElReporte()
-        'Else
-        '    MsgBox("Este formulario ya esta abierto", MsgBoxStyle.Information, nombreaplicacion)
-        '    Exit Sub
-        'End If
-        If frmmenureportes Is Nothing OrElse Not frmmenureportes.Visible Then
-            frmmenureportes = New frmMenureportes
-            frmmenureportes.MdiParent = Me
-            Me.SplitContainer1.Panel2.Controls.Add(frmmenureportes)
-            frmmenureportes.Show()
-        Else
-            MsgBox("Este formulario ya esta abierto", MsgBoxStyle.Information, nombreaplicacion)
-            Exit Sub
-        End If
-    End Sub
+    If frmmenureportes Is Nothing OrElse Not frmmenureportes.Visible Then
+      frmmenureportes = New frmMenureportes
+      frmmenureportes.MdiParent = Me
+      Me.SplitContainer1.Panel2.Controls.Add(frmmenureportes)
+      frmmenureportes.Show()
+    Else
+      MsgBox("Este formulario ya esta abierto", MsgBoxStyle.Information, nombreaplicacion)
+      Exit Sub
+    End If
+  End Sub
 
     Private Sub LlenarElReporte()
         Try
@@ -144,7 +138,7 @@ Public Class Form1
 
     Private Sub btnXml_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnXml.Click
         xml.escribirXml()
-        MsgBox("Plano Actualizado", MsgBoxStyle.Information, nombreaplicacion)
+    MsgBox("Plano Actualizado!!!", MsgBoxStyle.Information, nombreaplicacion)
     End Sub
 
 End Class
