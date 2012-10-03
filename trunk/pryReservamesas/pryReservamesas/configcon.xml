@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<servidor>
+    <origen>.</origen>
+	<instancia>SQLEXPRESS</instancia>
+	<bd>bdreservaciones</bd>
+	<usuario>sa</usuario>
+	<password>mandrake</password>
+</servidor>
