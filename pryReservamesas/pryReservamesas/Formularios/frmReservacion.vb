@@ -187,10 +187,12 @@ Public Class frmReservacion
     End Sub
 
     Private Sub btnHuesped_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnHuesped.Click
-        Dim frmhuesped As New frmHuesped
-        frmhuesped.WindowState = FormWindowState.Normal
-        frmhuesped.ShowDialog()
-        clshuesped.llenarCombo(cmbHuesped)
+    Dim frmhuesped As New frmHuesped
+    frmhuesped.WindowState = FormWindowState.Normal
+    frmhuesped.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+    frmhuesped.MaximizeBox = False
+    frmhuesped.ShowDialog()
+    clshuesped.llenarCombo(cmbHuesped)
     End Sub
 
     Private Sub txtBuscar_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtBuscar.KeyPress
